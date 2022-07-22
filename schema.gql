@@ -1,0 +1,63 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ProductType {
+  title: String!
+  productCode: String!
+  description: String!
+  price: String!
+  imagePath: String!
+  manufacture: String!
+  available: Boolean!
+}
+
+type OrderType {
+  name: String!
+}
+
+type UserType {
+  title: String!
+}
+
+type CategoryType {
+  title: String!
+}
+
+type CartType {
+  title: String!
+}
+
+input ProductInputType {
+  title: String!
+  productCode: String!
+  description: String!
+  price: String!
+  imagePath: String!
+  manufacture: String!
+  available: Boolean!
+}
+
+input OrderInputType {
+  name: String!
+}
+
+input UserInputType {
+  title: String!
+}
+
+input CategoryInputType {
+  title: String!
+}
+
+input CartInputType {
+  title: String!
+}
+
+type Query {
+  products: [ProductType!]!
+  orders: [OrderType!]!
+  users: [UserType!]!
+  categories: [CategoryType!]!
+  carts: [CartType!]!
+}
