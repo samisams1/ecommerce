@@ -5,6 +5,7 @@ import { Document } from "mongoose";
 export class Order {
 @Prop()
 name:String;
+
 }
 
 export  type OrderDocument = Order & Document;

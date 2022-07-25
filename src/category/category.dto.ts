@@ -7,6 +7,8 @@ import { Field, InputType, ObjectType } from "@nestjs/graphql";
 export class CategoryType {
 @Field()
 title:string;
+@Field()
+slug:"title"
 }
 
 

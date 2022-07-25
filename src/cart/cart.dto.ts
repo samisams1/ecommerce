@@ -5,5 +5,14 @@ import { Field, InputType, ObjectType } from "@nestjs/graphql";
 
 export class CartType {
     @Field()
-    title:string;
+    product:string;
+    @Field()
+    user:string;
+    @Field()
+    status:string;
+    @Field()
+    paymentStatus:Boolean;
+    @Field()
+    deliveryStatus:Boolean;
 }
+

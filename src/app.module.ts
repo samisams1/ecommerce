@@ -10,6 +10,10 @@ import { ProductController } from './product/product.controller';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ReportModule } from './report/report.module';
+import { CouponModule } from './coupon/coupon.module';
+import { SettingModule } from './setting/setting.module';
+import { ShippingModule } from './shipping/shipping.module';
 
 @Module({
   imports: [
@@ -18,7 +22,11 @@ import { MongooseModule } from '@nestjs/mongoose';
       driver: ApolloDriver,
       autoSchemaFile: 'schema.gql',
     }),
-    MongooseModule.forRoot('mongodb://localhost:27017/ecommerce')
+    MongooseModule.forRoot('mongodb://localhost:27017/ecommerce'),
+    ReportModule,
+    CouponModule,
+    SettingModule,
+    ShippingModule
   ],
   controllers: [AppController, ProductController],
   providers: [AppService],

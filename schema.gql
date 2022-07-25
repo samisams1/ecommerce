@@ -2,15 +2,29 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type CategoryType1 {
+  title: String!
+}
+
 type ProductType {
   title: String!
   productCode: String!
   description: String!
-  price: String!
+  price: Float!
+  quantity: Float!
   imagePath: String!
   manufacture: String!
+  barcode: String!
   available: Boolean!
+  createdAt: DateTime!
+  categories: CategoryType1!
+  user: String!
 }
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
 
 type OrderType {
   name: String!
@@ -22,20 +36,34 @@ type UserType {
 
 type CategoryType {
   title: String!
+  slug: String!
 }
 
 type CartType {
+  product: String!
+  user: String!
+  status: String!
+  paymentStatus: Boolean!
+  deliveryStatus: Boolean!
+}
+
+input CategoryInputType1 {
   title: String!
 }
 
 input ProductInputType {
-  title: String!
+  title: String = "true"
   productCode: String!
   description: String!
-  price: String!
+  price: Float!
+  quantity: Float!
   imagePath: String!
   manufacture: String!
+  barcode: String!
   available: Boolean!
+  createdAt: DateTime!
+  categories: CategoryInputType1!
+  user: String!
 }
 
 input OrderInputType {
@@ -48,10 +76,15 @@ input UserInputType {
 
 input CategoryInputType {
   title: String!
+  slug: String!
 }
 
 input CartInputType {
-  title: String!
+  product: String!
+  user: String!
+  status: String!
+  paymentStatus: Boolean!
+  deliveryStatus: Boolean!
 }
 
 type Query {
@@ -60,4 +93,8 @@ type Query {
   users: [UserType!]!
   categories: [CategoryType!]!
   carts: [CartType!]!
+}
+
+type Mutation {
+  createProduct(input: ProductInputType!): ProductType!
 }

@@ -11,4 +11,3 @@ export class UserService {
         return this.userModel.find().exec();
     }
 }
-

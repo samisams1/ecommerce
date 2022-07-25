@@ -1,10 +1,21 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { StringExpression } from "mongoose";
 
 
 @Schema()
 export class User {
-    @Prop()
-    name:String;
+    @Prop({required:true,unique:true})
+    username:String;
+    @Prop({required:true})
+    email:String;
+    @Prop({required:true})
+    password:String;
+    @Prop({required:true})
+    firstName:String;
+    @Prop({required:true})
+    lastName:string;
+
+
 
 }
 
