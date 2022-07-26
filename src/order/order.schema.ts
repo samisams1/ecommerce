@@ -3,9 +3,17 @@ import { Document } from "mongoose";
 
 @Schema()
 export class Order {
-@Prop()
-name:String;
-
+@Prop({required:true})
+owner:string;
+@Prop({required:true})
+totalPrice:Number;
+@Prop({required:true})
+products:[   
+product: string,
+quantity :Number   
+]
+@Prop({default:Date.now})
+createdAt:Date;
 }
 
 export  type OrderDocument = Order & Document;
