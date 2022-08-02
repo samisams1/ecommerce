@@ -14,6 +14,10 @@ import { ReportModule } from './report/report.module';
 import { CouponModule } from './coupon/coupon.module';
 import { SettingModule } from './setting/setting.module';
 import { ShippingModule } from './shipping/shipping.module';
+import { AddressModule } from './address/address/address.module';
+import { AddressModule } from './address/address.module';
+import { SupplierModule } from './supplier/supplier.module';
+import { WarehouseModule } from './warehouse/warehouse.module';
 
 @Module({
   imports: [
@@ -26,7 +30,10 @@ import { ShippingModule } from './shipping/shipping.module';
     ReportModule,
     CouponModule,
     SettingModule,
-    ShippingModule
+    ShippingModule,
+    AddressModule,
+    SupplierModule,
+    WarehouseModule
   ],
   controllers: [AppController, ProductController],
   providers: [AppService],

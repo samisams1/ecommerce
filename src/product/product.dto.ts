@@ -1,6 +1,5 @@
 import { ObjectType, Field, InputType } from "@nestjs/graphql";
-import { Prop } from "@nestjs/mongoose";
-import mongoose from "mongoose";
+
 
 @ObjectType('CategoryType1')
 @InputType('CategoryInputType1')

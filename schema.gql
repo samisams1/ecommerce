@@ -26,12 +26,34 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
-type OrderType {
+type UserType1 {
   name: String!
 }
 
-type UserType {
+type AddressType {
+  city: String!
+}
+
+type ProductType1 {
   title: String!
+  price: Float!
+  quantity: Int!
+}
+
+type OrderType {
+  totalPrice: Float!
+  status: String!
+  products: [ProductType1!]!
+  address: AddressType!
+  user: UserType1!
+}
+
+type UserType {
+  username: String!
+  email: String!
+  password: String!
+  firstName: String!
+  lastName: String!
 }
 
 type CategoryType {
@@ -39,10 +61,14 @@ type CategoryType {
   slug: String!
 }
 
+type AddressObjectType {
+  city: String!
+}
+
 type CartType {
-  product: String!
-  user: String!
-  status: String!
+  user: UserType!
+  products: [ProductType!]!
+  address: AddressObjectType!
   paymentStatus: Boolean!
   deliveryStatus: Boolean!
 }
@@ -66,12 +92,34 @@ input ProductInputType {
   user: String!
 }
 
-input OrderInputType {
+input UserInput1 {
   name: String!
 }
 
-input UserInputType {
+input Address {
+  city: String!
+}
+
+input ProductInput {
   title: String!
+  price: Float!
+  quantity: Int!
+}
+
+input OrderInputType {
+  totalPrice: Float!
+  status: String!
+  products: [ProductInput!]!
+  address: Address!
+  user: UserInput1!
+}
+
+input UserInputType {
+  username: String!
+  email: String!
+  password: String!
+  firstName: String!
+  lastName: String!
 }
 
 input CategoryInputType {
@@ -79,10 +127,14 @@ input CategoryInputType {
   slug: String!
 }
 
+input AddressInputType {
+  city: String!
+}
+
 input CartInputType {
-  product: String!
-  user: String!
-  status: String!
+  user: UserInputType!
+  products: [ProductInputType!]!
+  address: AddressInputType!
   paymentStatus: Boolean!
   deliveryStatus: Boolean!
 }

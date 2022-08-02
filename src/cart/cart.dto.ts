@@ -1,15 +1,20 @@
 import { Field, InputType, ObjectType } from "@nestjs/graphql";
+import { AddressType } from "src/address/address.dto";
+import { ProductType } from "src/product/product.dto";
+import { UserType } from "src/user/user.dto";
+import { User } from "src/user/user.schema";
+
 
 @ObjectType('CartType')
 @InputType('CartInputType')
 
 export class CartType {
     @Field()
-    product:string;
+    user:UserType;
+    @Field(()=>[ProductType])
+    products:ProductType[];
     @Field()
-    user:string;
-    @Field()
-    status:string;
+    address:AddressType;
     @Field()
     paymentStatus:Boolean;
     @Field()

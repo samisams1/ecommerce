@@ -1,8 +1,8 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { Document, trusted } from "mongoose";
-import { Category } from "src/category/category.schema";
 
 class Categories {
+    @Prop()
     title:string;
 }
 @Schema()
@@ -31,6 +31,10 @@ export class Product {
     available:Boolean;
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
     user: mongoose.Schema.Types.ObjectId;
+    @Prop()
+    discount:Number;
+    @Prop()
+    status:string;
     @Prop({default:Date.now})
     createdAt:Date
 }

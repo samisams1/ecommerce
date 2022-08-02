@@ -3,22 +3,36 @@ import { Document } from "mongoose";
 
 class Product {
     @Prop()
-    title:string;
+    title:String;
+    @Prop()
     price:Number;
+    @Prop()
+    quantity :Number;  
 }
+class Address {
+    @Prop()
+    city:string
+}
+class User {
+    @Prop()
+    name:string
+}
+
 @Schema()
 export class Order {
+
 @Prop({required:true})
-owner:string;
+products: [Product]
 @Prop({required:true})
 totalPrice:Number;
-@Prop({required:true})
-products:[  
-product: Product,
-quantity :Number   
-]
+@Prop()
+address:Address
+@Prop({default:"pending"})
+status:string
 @Prop({default:Date.now})
 createdAt:Date;
+@Prop()
+user:User
 }
 
 export  type OrderDocument = Order & Document;
