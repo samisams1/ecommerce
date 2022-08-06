@@ -7,7 +7,6 @@ import { Category, CategoryDocument } from './category.schema';
 @Injectable()
 export class CategoryService {
     constructor(@InjectModel(Category.name) private CategoryModel:Model<CategoryDocument>){}
-
     async findAll():Promise<Category[]> {
         return this.CategoryModel.find().exec();
     } 

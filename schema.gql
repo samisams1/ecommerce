@@ -170,6 +170,8 @@ type Mutation {
   createOrder(input: OrderInputType!): OrderType!
   createUser(input: UserInputType!): UserType!
   createCategory(input: CategoryInputType!): CategoryType!
+  updateCategory(id: String!, input: CategoryInputType!): CategoryType!
+  deleteCategory(id: String!): CategoryType!
   createCart(input: CartInputType!): CartType!
   updateCart(id: String!, input: CartInputType!): CartType!
   deleteCart(id: String!): CartType!

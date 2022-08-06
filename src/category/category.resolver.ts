@@ -15,6 +15,14 @@ export class CategoryResolver {
      async createCategory(@Args('input') input:CategoryType) {
         return this.categoryService.create(input);
      }
+    @Mutation(returns =>CategoryType)
+    async updateCategory(@Args('id') id:string,  @Args('input') input:CategoryType) {
+        return  this.categoryService.update(id,input);
+    }
+    @Mutation(returns => CategoryType)
+    async deleteCategory(@Args('id') id: string) {
+    return this.categoryService.delete(id);
+}  
    
 }
 
