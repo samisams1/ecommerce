@@ -173,6 +173,8 @@ type Mutation {
   updateOrder(id: String!, input: OrderInputType!): OrderType!
   deleteOrder(id: String!): OrderType!
   createUser(input: UserInputType!): UserType!
+  updateUser(id: String!, input: UserInputType!): UserType!
+  deleteUser: UserType!
   createCategory(input: CategoryInputType!): CategoryType!
   updateCategory(id: String!, input: CategoryInputType!): CategoryType!
   deleteCategory(id: String!): CategoryType!
