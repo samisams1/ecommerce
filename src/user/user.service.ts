@@ -15,4 +15,10 @@ export class UserService {
     const createUser = new this.userModel(createUserDto);
       return createUser.save();
    }
+   async update(id:string,updateUserDto:UserType):Promise<User> {
+    return this.userModel.findByIdAndUpdate(id,updateUserDto);
+   }
+   async delete(id:string) {
+   return this.userModel.findByIdAndDelete(id);
+   }
 }
