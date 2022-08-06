@@ -15,8 +15,12 @@ export class CategoryService {
           const createCategory = new this.CategoryModel(createCategoryDto);
           return createCategory.save();
      }
-
-     
+    async update(id: string, updateCategoryDto: CategoryType): Promise<Category> {
+        return this.CategoryModel.findByIdAndUpdate(id, updateCategoryDto);
+     }
+    async delete(id: string): Promise<Category> {
+        return this.CategoryModel.findByIdAndDelete(id);
+     }
 }   
 
     
