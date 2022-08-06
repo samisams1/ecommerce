@@ -16,5 +16,11 @@ export class ShippingService {
          const createShipping = new  this.shippingModel(createShippingDto);
           return createShipping.save();
     }
+    async update(id:string,updateShippingDto:ShippingType):Promise<Shipping> {
+       return this.shippingModel.findByIdAndUpdate(id,updateShippingDto);
+    }
+    async delete(id:string) {
+     return this.shippingModel.findByIdAndDelete(id);
+    }
 }  
        
