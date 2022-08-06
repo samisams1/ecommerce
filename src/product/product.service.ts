@@ -15,4 +15,10 @@ constructor(@InjectModel(Product.name) private productModel:Model<ProductDocumen
         const createProduct = new this.productModel(createProductDto);
         return createProduct.save();
     }
+    async update(id:string,updateProductDto:ProductType):Promise<Product> {
+        return this.productModel.findByIdAndUpdate(id,updateProductDto)
+    }
+    async delete(id:string):Promise<Product> {
+       return this.productModel.findByIdAndDelete(id);
+    }
 }

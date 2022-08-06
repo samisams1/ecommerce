@@ -167,7 +167,11 @@ type Query {
 
 type Mutation {
   createProduct(input: ProductInputType!): ProductType!
+  updateProduct(id: String!, input: ProductInputType!): ProductType!
+  deleteProduct(id: String!): ProductType!
   createOrder(input: OrderInputType!): OrderType!
+  updateOrder(id: String!, input: OrderInputType!): OrderType!
+  deleteOrder(id: String!): OrderType!
   createUser(input: UserInputType!): UserType!
   createCategory(input: CategoryInputType!): CategoryType!
   updateCategory(id: String!, input: CategoryInputType!): CategoryType!

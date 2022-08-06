@@ -15,7 +15,14 @@ export class ProductResolver {
     async createProduct(@Args('input') input: ProductType) {
         return this.productService.create(input);
     }
-   
+   @Mutation(returns => ProductType)
+   async updateProduct(@Args('id') id:string,@Args('input') input:ProductType) {
+    return this.productService.update(id,input);
+   }
+   @Mutation(returns => ProductType)
+   async deleteProduct(@Args('id') id:string) {
+    return this.productService.delete(id)
+   }
 }
 
 
