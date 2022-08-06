@@ -11,13 +11,10 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ReportModule } from './report/report.module';
-import { CouponModule } from './coupon/coupon.module';
 import { SettingModule } from './setting/setting.module';
 import { ShippingModule } from './shipping/shipping.module';
-import { AddressModule } from './address/address/address.module';
 import { AddressModule } from './address/address.module';
 import { SupplierModule } from './supplier/supplier.module';
-import { WarehouseModule } from './warehouse/warehouse.module';
 
 @Module({
   imports: [
@@ -28,12 +25,10 @@ import { WarehouseModule } from './warehouse/warehouse.module';
     }),
     MongooseModule.forRoot('mongodb://localhost:27017/ecommerce'),
     ReportModule,
-    CouponModule,
     SettingModule,
     ShippingModule,
     AddressModule,
     SupplierModule,
-    WarehouseModule
   ],
   controllers: [AppController, ProductController],
   providers: [AppService],

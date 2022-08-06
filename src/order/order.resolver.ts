@@ -1,4 +1,4 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { OrderType } from './order.dto';
 import { OrderService } from './order.service';
 
@@ -8,6 +8,10 @@ export class OrderResolver {
     @Query(returns => [OrderType])
     async orders() {
         return this.orderService.findAll();
+    }
+    @Mutation(returns => OrderType)
+    async createOrder(@Args('input') input: OrderType) {
+        return this.orderService.create(input);
     }
 }
 

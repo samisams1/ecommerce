@@ -1,8 +1,8 @@
-import { Prop, Schema } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 
 
 @Schema()
-export class Shiping {
+export class Shipping { 
     @Prop()
     type:string;
     @Prop()
@@ -12,3 +12,5 @@ export class Shiping {
     @Prop({default:Date.now})
     createdAt:Date;
 }
+export type ShippingDocument = Shipping &  Document;
+export const ShippingSchema = SchemaFactory.createForClass(Shipping);

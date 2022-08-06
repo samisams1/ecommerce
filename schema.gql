@@ -63,6 +63,8 @@ type CategoryType {
 
 type AddressObjectType {
   city: String!
+  street: String!
+  houseNumber: String!
 }
 
 type CartType {
@@ -71,6 +73,12 @@ type CartType {
   address: AddressObjectType!
   paymentStatus: Boolean!
   deliveryStatus: Boolean!
+}
+
+type ShippingObjectType {
+  type: String!
+  price: Float!
+  status: String!
 }
 
 input CategoryInputType1 {
@@ -129,6 +137,8 @@ input CategoryInputType {
 
 input AddressInputType {
   city: String!
+  street: String!
+  houseNumber: String!
 }
 
 input CartInputType {
@@ -139,14 +149,32 @@ input CartInputType {
   deliveryStatus: Boolean!
 }
 
+input ShippingnputType {
+  type: String!
+  price: Float!
+  status: String!
+}
+
 type Query {
   products: [ProductType!]!
   orders: [OrderType!]!
   users: [UserType!]!
   categories: [CategoryType!]!
   carts: [CartType!]!
+  shippings: [ShippingObjectType!]!
+  address: [AddressObjectType!]!
 }
 
 type Mutation {
   createProduct(input: ProductInputType!): ProductType!
+  createOrder(input: OrderInputType!): OrderType!
+  createUser(input: UserInputType!): UserType!
+  createCategory(input: CategoryInputType!): CategoryType!
+  createCart(input: CartInputType!): CartType!
+  updateCart(id: String!, input: CartInputType!): CartType!
+  deleteCart(id: String!): CartType!
+  createshipping(input: ShippingnputType!): ShippingObjectType!
+  createAddress(input: AddressInputType!): AddressObjectType!
+  updateAddress(id: String!, input: AddressInputType!): AddressObjectType!
+  deleteAddress(id: String!): AddressObjectType!
 }
