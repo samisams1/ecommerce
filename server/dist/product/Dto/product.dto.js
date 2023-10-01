@@ -15,9 +15,53 @@ let ProductType = class ProductType {
 };
 exports.ProductType = ProductType;
 __decorate([
-    (0, graphql_1.Field)(),
+    (0, graphql_1.Field)(() => graphql_1.ID),
+    __metadata("design:type", String)
+], ProductType.prototype, "_id", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => String),
     __metadata("design:type", String)
 ], ProductType.prototype, "name", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => String),
+    __metadata("design:type", String)
+], ProductType.prototype, "image", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => String),
+    __metadata("design:type", String)
+], ProductType.prototype, "brand", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => String),
+    __metadata("design:type", String)
+], ProductType.prototype, "category", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => String),
+    __metadata("design:type", String)
+], ProductType.prototype, "description", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    __metadata("design:type", Number)
+], ProductType.prototype, "rating", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    __metadata("design:type", Number)
+], ProductType.prototype, "numReviews", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_1.Float),
+    __metadata("design:type", Number)
+], ProductType.prototype, "price", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    __metadata("design:type", Number)
+], ProductType.prototype, "countInStock", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_1.GraphQLISODateTime),
+    __metadata("design:type", Date)
+], ProductType.prototype, "createdAt", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_1.GraphQLISODateTime),
+    __metadata("design:type", Date)
+], ProductType.prototype, "updatedAt", void 0);
 exports.ProductType = ProductType = __decorate([
     (0, graphql_1.ObjectType)('ProductType'),
     (0, graphql_1.InputType)('ProductInputType')

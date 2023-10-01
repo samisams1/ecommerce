@@ -15,9 +15,49 @@ let Product = class Product {
 };
 exports.Product = Product;
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ type: String, required: true }),
     __metadata("design:type", String)
 ], Product.prototype, "name", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, required: true, default: 'https://i.imgur.com/Vih6Km5.png' }),
+    __metadata("design:type", String)
+], Product.prototype, "image", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, required: true }),
+    __metadata("design:type", String)
+], Product.prototype, "brand", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, required: true }),
+    __metadata("design:type", String)
+], Product.prototype, "category", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, required: true }),
+    __metadata("design:type", String)
+], Product.prototype, "description", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, required: true, default: 0 }),
+    __metadata("design:type", Number)
+], Product.prototype, "rating", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, required: true, default: 0 }),
+    __metadata("design:type", Number)
+], Product.prototype, "numReviews", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, required: true, default: 0.0 }),
+    __metadata("design:type", Number)
+], Product.prototype, "price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, required: true, default: 0 }),
+    __metadata("design:type", Number)
+], Product.prototype, "countInStock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Date, default: Date.now }),
+    __metadata("design:type", Date)
+], Product.prototype, "createdAt", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Date, default: Date.now }),
+    __metadata("design:type", Date)
+], Product.prototype, "updatedAt", void 0);
 exports.Product = Product = __decorate([
     (0, mongoose_1.Schema)()
 ], Product);

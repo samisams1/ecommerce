@@ -22,13 +22,23 @@
 /// <reference types="mongoose/types/validation" />
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
-import { Document } from "mongoose";
+import { Types, Document } from "mongoose";
 export declare class Product {
     name: string;
+    image: string;
+    brand: string;
+    category: string;
+    description: string;
+    rating: number;
+    numReviews: number;
+    price: number;
+    countInStock: number;
+    createdAt: Date;
+    updatedAt: Date;
 }
 export type ProductDocument = Product & Document;
 export declare const ProductSchema: import("mongoose").Schema<Product, import("mongoose").Model<Product, any, any, any, Document<unknown, any, Product> & Product & {
-    _id: import("mongoose").Types.ObjectId;
+    _id: Types.ObjectId;
 }, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Product, Document<unknown, {}, import("mongoose").FlatRecord<Product>> & import("mongoose").FlatRecord<Product> & {
-    _id: import("mongoose").Types.ObjectId;
+    _id: Types.ObjectId;
 }>;

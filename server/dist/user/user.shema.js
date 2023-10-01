@@ -9,15 +9,57 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserSchema = exports.User = void 0;
+exports.UserSchema = exports.User = exports.RoleType = void 0;
+const graphql_1 = require("@nestjs/graphql");
 const mongoose_1 = require("@nestjs/mongoose");
+var RoleType;
+(function (RoleType) {
+    RoleType["USER"] = "USER";
+    RoleType["ADMIN"] = "ADMIN";
+})(RoleType || (exports.RoleType = RoleType = {}));
+(0, graphql_1.registerEnumType)(RoleType, {
+    name: 'RoleType',
+    description: 'User role',
+});
 let User = class User {
 };
 exports.User = User;
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ type: String, unique: true }),
     __metadata("design:type", String)
-], User.prototype, "name", void 0);
+], User.prototype, "username", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, unique: true }),
+    __metadata("design:type", String)
+], User.prototype, "email", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, nullable: true }),
+    __metadata("design:type", String)
+], User.prototype, "fullName", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, select: false }),
+    __metadata("design:type", String)
+], User.prototype, "password", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: false }),
+    __metadata("design:type", String)
+], User.prototype, "avatar", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, enum: Object.values(RoleType), default: RoleType.USER }),
+    __metadata("design:type", String)
+], User.prototype, "role", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, select: false, required: false }),
+    __metadata("design:type", String)
+], User.prototype, "currentHashedRefreshToken", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Date, default: Date.now }),
+    __metadata("design:type", Date)
+], User.prototype, "createdAt", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Date, default: Date.now }),
+    __metadata("design:type", Date)
+], User.prototype, "updatedAt", void 0);
 exports.User = User = __decorate([
     (0, mongoose_1.Schema)()
 ], User);

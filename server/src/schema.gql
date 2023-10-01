@@ -10,16 +10,43 @@ type CategoryType {
   name: String!
 }
 
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
 type Mutation {
   createCategory(category: CategoryInputType!): CategoryType!
 }
 
 input ProductInputType {
+  _id: ID!
+  brand: String!
+  category: String!
+  countInStock: Int!
+  createdAt: DateTime!
+  description: String!
+  image: String!
   name: String!
+  numReviews: Int!
+  price: Float!
+  rating: Int!
+  updatedAt: DateTime!
 }
 
 type ProductType {
+  _id: ID!
+  brand: String!
+  category: String!
+  countInStock: Int!
+  createdAt: DateTime!
+  description: String!
+  image: String!
   name: String!
+  numReviews: Int!
+  price: Float!
+  rating: Int!
+  updatedAt: DateTime!
 }
 
 type Query {
@@ -30,9 +57,23 @@ type Query {
 }
 
 input UserInputType {
+  avatar: String
+  createdAt: DateTime!
+  email: String!
+  fullName: String
   name: String!
+  role: String = "USER"
+  updatedAt: DateTime!
+  username: String!
 }
 
 type UserType {
+  avatar: String
+  createdAt: DateTime!
+  email: String!
+  fullName: String
   name: String!
+  role: String
+  updatedAt: DateTime!
+  username: String!
 }
