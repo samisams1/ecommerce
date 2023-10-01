@@ -14,7 +14,25 @@ type Mutation {
   createCategory(category: CategoryInputType!): CategoryType!
 }
 
+input ProductInputType {
+  name: String!
+}
+
+type ProductType {
+  name: String!
+}
+
 type Query {
   categories: [CategoryType!]!
   category(id: Int!): CategoryType!
+  products: [ProductType!]!
+  users: [UserType!]!
+}
+
+input UserInputType {
+  name: String!
+}
+
+type UserType {
+  name: String!
 }

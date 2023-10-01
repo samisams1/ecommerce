@@ -1,7 +1,7 @@
 import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
 import { CategoryService } from './category.service';
 import { Category } from './category.shema';
-import { CategoryType } from './dto/category.dto';
+import { CategoryType } from './Dto/category.dto';
 
 @Resolver()
 export class CategoryResolver {

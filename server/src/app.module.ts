@@ -8,6 +8,7 @@ import { join } from 'path';
 import { CartModule } from './cart/cart.module';
 import { CategoryModule } from './category/category.module';
 import { UserModule } from './user/user.module';
+import { ProductModule } from './product/product.module';
 @Module({
     imports: [
         GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -19,6 +20,7 @@ import { UserModule } from './user/user.module';
         CartModule,
         CategoryModule,
         UserModule,
+        ProductModule,
     ],
     controllers: [AppController],
     providers: [AppService],

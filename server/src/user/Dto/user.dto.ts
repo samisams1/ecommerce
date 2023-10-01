@@ -1,7 +1,7 @@
 import { ObjectType, Field, InputType } from '@nestjs/graphql';
 
 @ObjectType('UserType')
-@InputType('ProductInputType')
+@InputType('UserInputType')
 export class UserType {
     
     @Field()
