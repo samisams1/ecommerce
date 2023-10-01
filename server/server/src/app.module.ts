@@ -7,6 +7,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { CartModule } from './cart/cart.module';
 import { CategoryModule } from './category/category.module';
+import { UserModule } from './user/user.module';
 @Module({
     imports: [
         GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -16,7 +17,8 @@ import { CategoryModule } from './category/category.module';
         }),
         MongooseModule.forRoot('mongodb://127.0.0.1:27017/ecommerce'),
         CartModule,
-        CategoryModule
+        CategoryModule,
+        UserModule,
     ],
     controllers: [AppController],
     providers: [AppService],
