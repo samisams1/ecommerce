@@ -4,7 +4,7 @@ It is an online e-commerce website where users can shop for any product they nee
 ![image](https://user-images.githubusercontent.com/81190422/165009345-a89e7a0e-e106-4350-abc6-b722ca3f6300.png)
 
 
-This is a MERN Stack Ecommerce website. I made it for Practice MERN Tech Stack.
+This is a MERN Stack Ecommerce website. made MERN Tech Stack.
 In this project I am using = 
 #### M : MONGODB FOR DATABASE 
 #### E : EXPRESS JS FOR CREATING SERVER 
@@ -14,14 +14,13 @@ In this project I am using =
 
 Some important website links: ** NODE JS https://nodejs.org/en/ ** REACT JS https://reactjs.org/ ** NODEMAILER https://nodemailer.com/about/ ** EMAIL JS https://www.emailjs.com/
 
-## About Website Details
+Website Details
 
-In User Panel
-In this E-ccomerce Website User can Login and Register with their email id Even they forget their password He can forget their password. He can type their email id and he will get link mail about foget password in his inbox and after click link it will redirect to reset password page. He can update their password there. in this Webite users can shop any product what they need. He can Update their profile also. In Product Details They are able to give review and ratings to product. In Products page users can Sort and Search the product. User can buy the product from cart page and he can also store the product in favourite and remove the product from favourite and cart page. After Checkout he can fill his addresss and Confirm the product get discount below $5000 products. For Payment  He can Type (4242 4242 4242 4242) in card details for buy the product. This Payment Data is Restoring the STRIPE SERVER. After Payment He can Watch Order Details. 
+User Panel:
+The e-commerce website provides a user-friendly interface for users to access various features. Users can easily log in or register using their email address. In case they forget their password, they can initiate a password reset process by providing their email address. A password reset link will be sent to their inbox, allowing them to navigate to the password reset page. Here, users can update their password securely. Additionally, users can conveniently update their profile information. The website enables users to browse and shop for a wide range of products based on their preferences. Users can also provide valuable product reviews and ratings to help others make informed decisions. The products page offers sorting and searching functionality for enhanced user experience. After selecting desired items, users can add them to their cart for purchase. Moreover, users have the option to save products in their favorites list or remove them from the favorites and cart pages. During the checkout process, users can provide their shipping address and confirm the purchase. For products priced below $5000, users may be eligible for discounts. The payment process is facilitated through a secure payment gateway, and users can use the provided card details (4242 4242 4242 4242) for making purchases. The payment data is securely stored on the Stripe server. Upon successful payment, users can access detailed order information.
 
-In Admin Panel 
-In Admin Dashboard he can watch Total Amount of products which Delivered by Usersa and there is Stock Quantity and Total Amount Bar also. Admin Get All Products, Users and Orders Data. In this panel admin can DELETE and EDIT Any Users and Products. Admin can create Products for users panel. Admin Can update Product Details like: Name, Price, Discount, Description, Category, Stock and Product Images. Admin can make any user to admin. Admin can Changed the Status of Ordered Product Like: Shipped And Delivered. Admin Can Also Delte the Product reviews.   
-   
+Admin Panel:
+The admin panel provides a comprehensive dashboard where administrators can monitor various aspects of the e-commerce platform. The dashboard displays the total amount of products delivered by users, along with stock quantity and a total amount bar for quick reference. Administrators have access to all data related to products, users, and orders. They can perform essential administrative tasks such as deleting and editing user and product information. Administrators also have the authority to create new products for the user panel. They can update product details, including name, price, discount, description, category, stock, and product images. Additionally, administrators can assign admin privileges to selected users. The admin panel allows administrators to change the status of ordered products, indicating whether they have been shipped or delivered. Furthermore, administrators have the capability to remove product reviews for maintaining the integrity of the platform.
 
 ## Authentication Page
 ![image](https://user-images.githubusercontent.com/81190422/165008468-9884d1f1-0c74-4080-be83-bddecc0d39e9.png)
@@ -131,8 +130,3 @@ In Admin Dashboard he can watch Total Amount of products which Delivered by User
 ![image](https://user-images.githubusercontent.com/81190422/165010485-5dffd855-af6e-4199-853c-c8238b651019.png)
 
 
-=========================  CONNECTS WITH ME  ====================             
-
-#### INSTAGRAM: https://www.instagram.com/_niku_7827/  
-#### YOUTUBE  : https://www.linkedin.com/in/nitish-kumar-50a564205/
-####      LINKEDIN : https://www.linkedin.com/in/nitish-kumar-50a564205/
